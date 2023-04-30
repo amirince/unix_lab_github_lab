@@ -12,3 +12,9 @@ for line in message: # iterating through each line in message
             letter_ascii = ord(letter) # converting letter to ascii
             new_letter = (letter_ascii + shft_amt - 65) % 26 + 65 # getting ascii off new letter
             new_message += chr(new_letter)
+
+blocks = [new_message[i:i+5] for i in range(0, len(new_message), 5)] # splitting results in blocks of 5 char
+
+for i in range(0, len(blocks), 10): # printing ten blocks per line
+    print(' '.join(blocks[i:i+10]))
+
