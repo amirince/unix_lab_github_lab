@@ -11,7 +11,7 @@ for line in message: # iterating through each line in message
         if letter.isalpha(): # checking if letter is alphabet leter
             letter_ascii = ord(letter) # converting letter to ascii
             new_letter = (letter_ascii + shft_amt - 65) % 26 + 65 # getting ascii off new letter
-            new_message += chr(new_letter)
+            new_message += chr(new_letter) # adding ecrypted char to new_message
 
 blocks = [new_message[i:i+5] for i in range(0, len(new_message), 5)] # splitting results in blocks of 5 char
 
